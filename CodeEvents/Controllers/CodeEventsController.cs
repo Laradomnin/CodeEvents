@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using CodeEvents.Api.Data;
 using CodeEvents.Api.Data.Repositories;
 using CodeEvents.Api.Controllers.Core.Entities;
+using AutoMapper;
+using CodeEvents.Api.Controllers.Core.Dto;
 
 namespace CodeEvents.Api.Controllers
 {
@@ -16,18 +18,23 @@ namespace CodeEvents.Api.Controllers
     public class CodeEventsController : ControllerBase
     {
         private readonly CodeEventsApiContext db;
+        private IMapper mapper;
+        private readonly UnitOfWork uow;
 
-        public CodeEventsController(CodeEventsApiContext context)
+        public CodeEventsController(CodeEventsApiContext context, IMapper mapper)
         {
             db = context;
-            var uof = new UnitOfWork(db);
+            this.mapper = mapper; 
+            uow = new UnitOfWork(db);
         }
 
-        // GET: api/CodeEvents
+       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CodeEvent>>> GetCodeEvent()
         {
-            return null;
+            var events = await uow.CodeEventRepository.GetAsync();
+            var dto = mapper.Map<IEnumerable<CodeEventDto>>(events);
+            return Ok(dto);
         }
 
        
