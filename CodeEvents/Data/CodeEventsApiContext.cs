@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using CodeEvents.Api.Core.Entities;
+using CodeEvents.Api.Controllers.Core.Entities;
 
 namespace CodeEvents.Api.Data
 {
@@ -14,6 +14,6 @@ namespace CodeEvents.Api.Data
         {
         }
 
-        public DbSet<CodeEvents.Api.Core.Entities.CodeEvent> CodeEvent { get; set; } = default!;
+        public DbSet<CodeEvent> CodeEvent { get; set; } = default!;
     }
 }

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using CodeEvents.Api.Core.Entities;
 using CodeEvents.Api.Data;
 using CodeEvents.Api.Data.Repositories;
+using CodeEvents.Api.Controllers.Core.Entities;
 
 namespace CodeEvents.Api.Controllers
 {

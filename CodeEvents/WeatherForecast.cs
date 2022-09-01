@@ -1,4 +1,4 @@
-namespace CodeEvents
+namespace CodeEvents.Api
 {
     public class WeatherForecast
     {

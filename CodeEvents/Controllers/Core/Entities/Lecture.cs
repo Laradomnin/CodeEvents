@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeEvents.Api.Core.Entities
+namespace CodeEvents.Api.Controllers.Core.Entities
 {
 #nullable disable
     public class Lecture

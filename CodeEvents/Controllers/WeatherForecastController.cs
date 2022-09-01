@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace CodeEvents.Controllers
+namespace CodeEvents.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
