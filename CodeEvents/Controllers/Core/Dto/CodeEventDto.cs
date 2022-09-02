@@ -17,7 +17,7 @@ namespace CodeEvents.Api.Controllers.Core.Dto
         public string LocationCountry { get; set; }
 
 
-        public ICollection<Lecture> Lectures { get; set; }
+        public ICollection<LectureDto> Lectures { get; set; }
 
     }
 }
